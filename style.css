@@ -1,0 +1,522 @@
+/* Definicja Zmiennych Globalnych - Architektura Barw i Przestrzeni */
+:root {
+    --color-primary: #8CA293; /* Kojąca, szałwiowa zieleń */
+    --color-primary-dark: #6C8273;
+    --color-background: #FAF9F6; /* Ciepły, złamany biały */
+    --color-text-main: #333333; /* Zredukowany kontrast dla oczu */
+    --color-text-muted: #5A6B60;
+    --color-white: #FFFFFF;
+    
+    --font-sans: 'Inter', sans-serif;
+    --font-serif: 'Playfair Display', serif;
+    
+    --spacing-md: 2rem;
+    --spacing-lg: 4rem;
+    --border-radius: 8px; /* Rygorystyczny wymóg z dokumentacji dla kart */
+}
+
+/* Reset Inżynieryjny */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-sans);
+    color: var(--color-text-main);
+    background-color: var(--color-background);
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--spacing-md);
+}
+
+.serif-heading {
+    font-family: var(--font-serif);
+    color: var(--color-primary-dark);
+}
+
+.text-center { text-align: center; }
+.subtitle { color: var(--color-text-muted); margin-bottom: var(--spacing-md); }
+
+/* Nawigacja (Flexbox) */
+.main-header {
+    background-color: var(--color-white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem var(--spacing-lg);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: var(--font-serif);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-primary-dark);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--color-text-main);
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--color-primary);
+}
+
+/* Przyciski */
+.btn-primary {
+    background-color: var(--color-primary);
+    color: var(--color-white) !important;
+    padding: 0.75rem 1.5rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-primary-dark);
+}
+
+.btn-large {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+}
+
+/* Strefa Powitalna (Hero) */
+.hero-section {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 80vh;
+    padding: var(--spacing-lg);
+    background-color: #F2EFE9;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-right: var(--spacing-lg);
+}
+
+.hero-content h1 {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: var(--color-text-muted);
+}
+
+.hero-image-wrapper {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-image {
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--border-radius);
+    /* Inżynieria spójności wizualnej obrazu z bazy z designem: */
+    filter: sepia(10%) brightness(95%) contrast(90%);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+}
+
+/* Sekcja O Mnie (Grid) */
+.about-section {
+    padding: 6rem 0;
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.about-text h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.about-text p {
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.diploma-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.diploma-card {
+    background: var(--color-white);
+    padding: 2rem;
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    border-left: 4px solid var(--color-primary);
+}
+
+/* Moduł Akordeonu */
+.methods-section {
+    background-color: var(--color-white);
+    padding: 6rem 0;
+}
+
+.accordion-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #EAEAEA;
+}
+
+.accordion-header {
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 0;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    font-family: var(--font-serif);
+    font-weight: 600;
+    color: var(--color-primary-dark);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.accordion-header::after {
+    content: '+';
+    font-size: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+}
+
+.accordion-content p {
+    padding-bottom: 1.5rem;
+    color: var(--color-text-muted);
+}
+
+/* STRUKTURA KOSZTÓW - KARTY CENNIKOWE (Rygorystyczny GRID) */
+.pricing-section {
+    padding: 6rem 0;
+    background-color: #F9FBFA;
+}
+
+.pricing-grid {
+    display: grid;
+    /* CSS Grid - idealne rozłożenie 3 kart bez floatów */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.pricing-card {
+    background: var(--color-white);
+    padding: 3rem 2rem;
+    /* Rygorystyczny nakaz z dokumentacji: */
+    border-radius: 8px; 
+    text-align: center;
+    border: 1px solid #EAEAEA;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+/* Wdrożenie lewitacji karty na hover wg specyfikacji */
+.pricing-card:hover {
+    box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+    transform: translateY(-5px);
+}
+
+.pricing-card.highlight {
+    border: 2px solid var(--color-primary);
+    position: relative;
+}
+
+.pricing-card h3 {
+    font-family: var(--font-serif);
+    margin-bottom: 1rem;
+    color: var(--color-primary-dark);
+}
+
+.pricing-card .price {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 2rem;
+}
+
+.pricing-card .features {
+    list-style: none;
+    text-align: left;
+}
+
+.pricing-card .features li {
+    margin-bottom: 1rem;
+    padding-left: 1.5rem;
+    position: relative;
+}
+
+.pricing-card .features li::before {
+    content: '✓';
+    position: absolute;
+    left: 0;
+    color: var(--color-primary);
+    font-weight: bold;
+}
+
+/* Sekcja Kalendarza - Szkielet Stylów */
+.booking-section {
+    padding: 6rem 0;
+}
+
+.calendar-wrapper {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    padding: 2rem;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.calendar-nav {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--color-primary);
+}
+
+.calendar-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.calendar-table th {
+    padding: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.calendar-table td {
+    padding: 1rem;
+    text-align: center;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.calendar-table td:hover:not(:empty) {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+
+.main-footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--color-text-main);
+    color: var(--color-white);
+}
+
+/* Responsywność - Mobile First (Media Queries) */
+@media screen and (max-width: 992px) {
+    .pricing-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+    .nav-links {
+        display: none; /* W prawdziwym projekcie dodalibyśmy tu Hamburger Menu w JS */
+    }
+}
+
+/* --- AKTUALIZACJA ARCHITEKTURY: INTERAKCJE I MODAL --- */
+
+:root {
+    --color-accent: #D9A087; /* Nowy kolor - Ciepła Terakota dla wybranego dnia */
+}
+
+/* Interaktywność Cennika */
+.pricing-card {
+    cursor: pointer; /* Zmienia kursor na "łapkę", sugerując klikalność */
+}
+
+/* Stan Zaznaczonego Dnia w Kalendarzu */
+.calendar-table td.selected-day {
+    background-color: var(--color-accent) !important;
+    color: var(--color-white) !important;
+    box-shadow: 0 4px 10px rgba(217, 160, 135, 0.4);
+    transform: scale(1.1);
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+/* Inżynieria Wyskakującego Okna (Modal) */
+.booking-modal {
+    display: none; /* Domyślnie ukryte */
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(4px); /* Nowoczesne rozmycie tła */
+    z-index: 2000;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.booking-modal.active {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    background: var(--color-white);
+    padding: 3rem;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 500px;
+    position: relative;
+    transform: translateY(-20px);
+    transition: transform 0.3s ease;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.1);
+}
+
+.booking-modal.active .modal-content {
+    transform: translateY(0);
+}
+
+.close-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.close-btn:hover { color: var(--color-text-main); }
+
+.booking-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+.form-group input, .form-group select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-sans);
+}
+
+.form-group input:focus, .form-group select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 2px rgba(140, 162, 147, 0.2);
+}
+
+/* Inżynieria Wizualna Komunikatu Sukcesu */
+.success-message {
+    display: none; /* Ukryte w drzewie DOM przy starcie */
+    text-align: center;
+    padding: 2rem 0;
+    animation: fadeIn 0.6s ease forwards;
+}
+
+.success-message h3 {
+    font-family: var(--font-serif);
+    color: var(--color-primary-dark);
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.success-message p {
+    color: var(--color-text-muted);
+    margin-bottom: 1.5rem;
+    font-size: 1.05rem;
+}
+
+.success-message .signature {
+    color: var(--color-text-main);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(15px); }
+    to { opacity: 1; transform: translateY(0); }
+}

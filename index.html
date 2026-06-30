@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Profesjonalny gabinet psychoterapeutyczny. Twoja bezpieczna przestrzeń do rozwoju i wsparcia.">
+    <title>Gabinet Psychoterapeutyczny | Bezpieczna Przestrzeń</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Ładowanie nowoczesnych fontów szeryfowych i bezszeryfowych -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Główny Szlak Nawigacyjny -->
+    <header class="main-header">
+        <nav class="navigation" aria-label="Główna nawigacja">
+            <div class="logo">Ośrodek Równowagi</div>
+            <ul class="nav-links">
+                <li><a href="#hero">Start</a></li>
+                <li><a href="#about">O mnie</a></li>
+                <li><a href="#methods">Narzędzia</a></li>
+                <li><a href="#pricing">Cennik</a></li>
+                <li><a href="#booking" class="btn-primary">Umów wizytę</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Strefa Powitalna -->
+    <section id="hero" class="hero-section">
+        <div class="hero-content">
+            <h1 class="serif-heading">Twoja bezpieczna przestrzeń do rozwoju</h1>
+            <p>Zatrzymaj się. Odzyskaj równowagę. Profesjonalne wsparcie psychologiczne dostosowane do Twoich potrzeb w atmosferze pełnej empatii i zrozumienia.</p>
+            <a href="#booking" class="btn-primary btn-large">Rozpocznij terapię</a>
+        </div>
+        <div class="hero-image-wrapper">
+            <!-- Dynamiczne ładowanie tematycznego zdjęcia z Unsplash -->
+            <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Ciepły, bezpieczny gabinet psychologiczny" class="hero-image">
+        </div>
+    </section>
+
+    <!-- Profil Osobisty -->
+    <section id="about" class="about-section">
+        <div class="container about-grid">
+            <article class="about-text">
+                <h2 class="serif-heading">Poznajmy się</h2>
+                <p>Wierzę, że każdy z nas nosi w sobie potencjał do uzdrowienia. Moją rolą nie jest dawanie gotowych rad, lecz towarzyszenie Ci w drodze do zrozumienia własnych emocji i mechanizmów obronnych.</p>
+                <p>W swojej pracy łączę podejście oparte na dowodach naukowych z głębokim humanizmem. Moim priorytetem jest stworzenie dla Ciebie przestrzeni wolnej od oceny, gdzie każda emocja ma prawo wybrzmieć.</p>
+            </article>
+            <aside class="diploma-cards">
+                <div class="diploma-card">
+                    <h3>Magister Psychologii</h3>
+                    <p>Uniwersytet SWPS</p>
+                </div>
+                <div class="diploma-card">
+                    <h3>Certyfikowany Psychoterapeuta</h3>
+                    <p>Polskie Towarzystwo Psychologiczne</p>
+                </div>
+            </aside>
+        </div>
+    </section>
+
+    <!-- Metodologia (Przygotowane pod JS Akordeon) -->
+    <section id="methods" class="methods-section">
+        <div class="container">
+            <h2 class="serif-heading text-center">Narzędzia i Metodologia</h2>
+            <p class="text-center subtitle">Jak pracujemy podczas sesji?</p>
+            
+            <div class="accordion-container" id="accordion">
+                <!-- Elementy akordeonu będą kontrolowane przez Vanilla JS -->
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">Terapia Poznawczo-Behawioralna (CBT)</button>
+                    <div class="accordion-content">
+                        <p>Skupiamy się na identyfikacji i zmianie negatywnych wzorców myślenia, które wpływają na Twoje emocje i zachowanie. To skuteczna metoda w leczeniu lęku i depresji, pozwalająca odzyskać kontrolę nad codziennością.</p>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" aria-expanded="false">Podejście Systemowe</button>
+                    <div class="accordion-content">
+                        <p>Analizujemy trudności w kontekście relacji z bliskimi i środowiskiem. Zrozumienie dynamiki rodzinnej często ukazuje ukryte przyczyny obecnych kryzysów emocjonalnych.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Struktura Kosztów (Cennik - rygorystyczny CSS Grid) -->
+    <section id="pricing" class="pricing-section">
+        <div class="container">
+            <h2 class="serif-heading text-center">Transparentny Cennik</h2>
+            <div class="pricing-grid">
+                <!-- Karta 1 -->
+                <div class="pricing-card">
+                    <h3>Konsultacja Wstępna</h3>
+                    <div class="price">180 zł</div>
+                    <ul class="features">
+                        <li>Czas trwania: 50 minut</li>
+                        <li>Wywiad diagnostyczny</li>
+                        <li>Ustalenie celów terapii</li>
+                    </ul>
+                </div>
+                <!-- Karta 2 -->
+                <div class="pricing-card"> <h3>Sesja Indywidualna</h3>
+                    
+                    <div class="price">200 zł</div>
+                    <ul class="features">
+                        <li>Czas trwania: 50 minut</li>
+                        <li>Terapia krótkoterminowa</li>
+                        <li>Praca nad bieżącymi procesami</li>
+                    </ul>
+                </div>
+                <!-- Karta 3 -->
+                <div class="pricing-card">
+                    <h3>Terapia Par</h3>
+                    <div class="price">250 zł</div>
+                    <ul class="features">
+                        <li>Czas trwania: 90 minut</li>
+                        <li>Mediacja konfliktów</li>
+                        <li>Budowanie bezpiecznej więzi</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kalendarz Rezerwacyjny (Szkielet pod Vanilla JS) -->
+    <section id="booking" class="booking-section">
+        <div class="container">
+            <h2 class="serif-heading text-center">Zarezerwuj Termin</h2>
+            <p class="text-center subtitle">Wybierz dogodną datę z kalendarza poniżej.</p>
+            
+            <div class="calendar-wrapper">
+                <div class="calendar-header">
+                    <button id="prev-month" class="calendar-nav">&laquo;</button>
+                    <h3 id="month-year-display">-- --</h3>
+                    <button id="next-month" class="calendar-nav">&raquo;</button>
+                </div>
+                <table class="calendar-table" id="calendar-grid">
+                    <thead>
+                        <tr>
+                            <th>Pn</th><th>Wt</th><th>Śr</th><th>Czw</th><th>Pt</th><th>Sb</th><th>Nd</th>
+                        </tr>
+                    </thead>
+                    <tbody id="calendar-body">
+                        <!-- Generowane asynchronicznie przez Vanilla JS -->
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+                <div id="booking-modal" class="booking-modal" aria-hidden="true">
+                <div class="modal-content">
+                         <button id="close-modal" class="close-btn" aria-label="Zamknij formularz">&times;</button>
+                            <h2 class="serif-heading text-center">Potwierdź rezerwację</h2>
+                                <p class="text-center subtitle">Wybrana data: <strong id="selected-date-display"></strong></p>
+            
+                        <form action="https://formspree.io/f/mojroobl" method="POST" class="booking-form" id="booking-form">
+                <input type="hidden" name="Wybrana_Data" id="hidden-date-input">
+                
+                <div id="form-fields">
+                    <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" id="name" name="Imię" required placeholder="np. Jan Kowalski">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" id="email" name="Email" required placeholder="twoj@email.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Numer telefonu</label>
+                        <input type="tel" id="phone" name="Telefon" required placeholder="np. +48 123 456 789" pattern="[\+0-9\s\-]+">
+                    </div>
+                    <div class="form-group">
+                        <label for="service">Wybierz usługę</label>
+                        <select id="service" name="Usługa" required>
+                            <option value="Konsultacja Wstępna">Konsultacja Wstępna (180 zł)</option>
+                            <option value="Sesja Indywidualna">Sesja Indywidualna (200 zł)</option>
+                            <option value="Terapia Par">Terapia Par (250 zł)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary btn-large" style="width: 100%; margin-top: 1rem;" id="submit-btn">Zapisz się na wizytę</button>
+                </div>
+
+                <div id="success-message" class="success-message">
+                    <h3>Gratulacje, to ważny krok.</h3>
+                    <p>Twój termin został pomyślnie zarezerwowany. Wkrótce otrzymasz na podany adres e-mail wiadomość z potwierdzeniem wizyty oraz wszelkimi niezbędnymi szczegółami.</p>
+                    <p class="signature">Czekamy na Ciebie,<br><strong>Zespół Profesjonalnych Psychologów</strong></p>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer class="main-footer">
+        <p>&copy; 2026 Ośrodek Równowagi. Wykonano w ramach inżynierii Vanilla Stack.</p>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
